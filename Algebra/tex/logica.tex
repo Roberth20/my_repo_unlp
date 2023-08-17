@@ -1,0 +1,271 @@
+\chapter{Logica}
+
+\section{Escribir en el lenguaje simbólico – Tablas de verdad}
+
+\textit{El propósito de los siguientes ejercicios es  familiarizarnos con la notación simbólica del cálculo proposicional y con el uso de esquemas y cuantificadores. Además, es importante que ejerciten el hacer tablas de verdad para poder establecer después el valor de verdad de proposiciones compuestas a partir del valor de las proposiciones atómicas que las integran.}\\
+
+\textbf{Ejercicio 1.} Determinar si los siguientes enunciados son proposiciones. Escribir en lenguaje simbólico aquellos que sean
+proposición e indicar su valor de verdad. Y si algún enunciado no es proposición, explicar porqué.
+
+\begin{enumerate}
+	\item 8 es par y 6 es impar. 
+
+	Son proposiciones, llamando a las proposiciones como $p = \text{ 8 es par}$ y $q = \text{ 6 es impar}$. Construimos la tabla de verdad para la preposici\'on. \textbf{Recordamos} $\wedge$ es la \textbf{conjunci\'on} o \textit{"y}". 
+	
+	\begin{displaymath}
+		\begin{array}{|c c|c|}
+			p & q & p \land q\\
+			\hline 
+			V & V & V\\
+			V & F & F\\
+			F & V & F\\
+			F & F & F\\
+		\end{array}
+	\end{displaymath}
+
+	Encontramos que la proposici\'on es inequívocamente falsa, debido a los valores de $p$ y $q$.
+	
+	\item 8 es par o 6 es impar.
+	
+	Es una proposici\'on. Llamando $p = \text{ 8 es par}$ y $q = \text{ 6 es impar}$, a su vez \textbf{recordando} a la \textbf{disyunci\'on} u "o" como $\vee$, tenemos:
+	
+	\begin{displaymath}
+		\begin{array}{|c c|c|}
+			p & q & p \vee q\\
+			\hline 
+			V & V & V\\
+			V & F & V\\
+			F & V & V\\
+			F & F & F\\
+		\end{array}
+	\end{displaymath}
+
+	As\'i, encontramos que la proposici\'on es verdadera y se cumple cuando $p$ es verdadera o $q$ es falsa.
+	
+	\item 4 es par y 2 no divide a 5.
+	
+	Es proposici\'on. Llamando $p = \text{ 4 es par}$ y $q = \text{ 2 no divide a 5}$. Se trata de una conjunci\'on, por lo tanto, 	
+	
+	\begin{displaymath}
+		\begin{array}{|c c|c|}
+			p & q & p \land q\\
+			\hline 
+			V & V & V\\
+			V & F & F\\
+			F & V & F\\
+			F & F & F\\
+		\end{array}
+	\end{displaymath}
+
+	Y la proposici\'on ser\'a verdadera siempre y cuando ambas afirmaciones sean correctas.
+	
+	\item $x < 2$. 
+	
+	No es una proposici\'on, esto se debe a que no es posible determinar el valor de verdad de la expresi\'on sin antes fijar un valor a la variable $x$.
+	
+	\item Si 8 es par y 6 impar, o bien 4 es par o 2 divide a 8.
+	
+	Es una proposici\'on. Nombramos a las proposiciones como:
+	
+	\begin{align*}
+		p &= \text{ 8 es par} & q &= \text{ 6 es impar}\\
+		r &= \text{ 4 es par} & s &= \text{ 2 divide a 8}
+	\end{align*}
+
+	La proposici\'on tendr\'a la forma: $(p \wedge q) \rightarrow (r \vee s)$ y la tabla de verdad es:
+	
+	\begin{displaymath}
+		\begin{array}{|c|c|c|c|c|c|c|}
+			p & q & r & s & p \wedge q & r \vee s & (p \wedge q) \rightarrow (r \vee s)\\
+			\hline 
+			V & V & V & V & V & V & V\\
+			V & V & V & F & V & V & V\\
+			V & V & F & V & V & V & V\\
+			V & V & F & F & V & F &	F\\
+				
+			V & F & V & V & F & V & V\\
+			V & F & V & F & F & V & V\\
+			V & F & F & V & F & V & V\\
+			V & F & F & F & F & F &	V\\	
+			
+			F & V & V & V & F & V & V\\
+			F & V & V & F & F & V & V\\
+			F & V & F & V & F & V & V\\
+			F & V & F & F & F & F &	V\\
+			
+			F & F & V & V & F & V & V\\
+			F & F & V & F & F & V & V\\
+			F & F & F & V & F & V & V\\
+			F & F & F & F & F & F &	V\\	
+		\end{array}
+	\end{displaymath}
+
+	Para la misma se utilizo la definici\'on de tabla de verdad del \textbf{condicional} $\rightarrow$ que tiene la forma:
+
+	\begin{displaymath}
+		\begin{array}{|c c|c|}
+			p & q & p \rightarrow q\\
+			\hline 
+			V & V & V\\
+			V & F & F\\
+			F & V & V\\
+			F & F & V\\
+		\end{array}
+	\end{displaymath}
+
+	Y por lo tanto, concluimos que la proposici\'on ser\'a siempre verdadera cuando $q$ sea falsa.
+	
+	\item Hace frío.
+	
+	No es una proposici\'on, se trata de una opini\'on subjetiva, implicando que no puede cuantificarse su valor de verdad.
+	
+	\item 10 es múltiplo de 5 pero no de 3. 
+	
+	Es una proposici\'on. Llamando las proposiciones $p = \text{ 10 es m\'ultiplo de 5}$ y $\neg q = \text{ 10 es multiplo de 3}$. Construimos la tabla de verdad
+	
+	\begin{displaymath}
+		\begin{array}{|c c|c|}
+			p & \neg q & p \wedge \neg q\\
+			\hline 
+			V & F & F\\
+			V & V & V\\
+			F & F & F\\
+			F & V & F\\
+		\end{array}
+	\end{displaymath}
+
+	Encontramos que es verdad siempre que $p$ sea verdad y $q$ falso.
+\end{enumerate}
+
+\textbf{Ejercicio 2}. Dadas la siguientes proposiciones, reescribirlas utilizando “necesario” y “suficiente”.
+
+\begin{enumerate}
+	\item Si un número es múltiplo de 3 entonces su cuadrado es múltiplo de 9. 
+	
+	Reescribiendo como condicional y recordando que, la estructura es: p es \textit{suficiente} para q, o, q es \textit{necesaria} para p. As\'i, llamando $p =$ un n\'umero es m\'ultiplo de 3 y $q = $ su cuadrado es m\'ultiplo de 9. Las dos formas son:
+	\begin{itemize}
+		\item Un n\'umero m\'ultiplo de 3 es \textit{suficiente} para que su cuadrado sea m\'ultiplo de 9.
+		\item Si el cuadrado de un n\'umero es m\'ultiplo de 9 es \textit{necesario} que el n\'umero sea m\'ultiplo de 3
+	\end{itemize}
+
+	\item Un número es múltiplo de 4 sólo si es divisible por 2.
+	
+	Llamando $p =$ n\'umero es m\'ultiplo de 4 y $q =$ divisible por 2. Entonces,
+	\begin{itemize}
+		\item Si un n\'umero es m\'ultiplo de 4 es \textit{suficiente} para que sea divisible por 2.
+		\item Si un n\'umero es divisible por 2 es \textit{necesario} que el m\'ultiplo del n\'umero sea 4
+	\end{itemize}
+
+	\item Un número es múltiplo de 7 si es múltiplo de 21.
+	
+	Llamando $q =$ n\'umero es m\'ultiplo de 7 y $p =$ n\'umero m\'ultiplo de 21, utilizando la estructura detallada previamente, las oraciones son
+	\begin{itemize}
+		\item Si un n\'umero es m\'ultiplo de 21 es \textit{suficiente} para que sea m\'ultiplo de 7
+		\item Un n\'umero es m\'ultiplo de 7 es necesario que sea m\'ultiplo de 21.
+	\end{itemize}
+
+	\item Enunciar el recíproco, el contrarrecíproco y el contrario del enunciado en b).
+	
+	Recordando que el \textbf{rec\'iproco} es $q \rightarrow p$ si $p \rightarrow q$, el \textbf{contrarrec\'iproco} es $\neg q \rightarrow \neg p$ y el \textbf{contrario} es $\neg p \rightarrow \neg q$. De esta manera, tenemos que las expresiones son:
+	\begin{itemize}
+		\item \textbf{Rec\'iproco:} Un n\'umero es divisible por 2 si es m\'ultiplo de 4.
+		\item \textbf{Contrarrec\'iproco:} Si un n\'umero no es divisible por 2 entonces no es m\'ultiplo de 4.
+		\item \textbf{Contrario:} Un n\'umero no es m\'ultiplo de 4 si no es divisible por 2.
+	\end{itemize}
+\end{enumerate}
+
+\textbf{Ejercicio 3.} Construir las tablas de verdad de las siguientes fórmulas y clasificarlas en tautologías ,contradicciones ycontingencias.
+
+\begin{enumerate}
+	\item $\neg p \rightarrow (q \vee \neg p)$
+	
+	La tabla de verdad correspondiente es
+	
+	\begin{displaymath}
+		\begin{array}{|c c|c|c|}
+			\neg p & q & q \vee \neg p & \neg p \rightarrow (q \vee \neg p)\\
+			\hline 
+			F & V & V & F\\
+			F & F & F & V\\
+			V & V & V & V\\
+			V & F & V & V\\
+		\end{array}
+	\end{displaymath}
+	
+	Debido a que su veracidad depende los valores de las proposiciones, concluimos que es una \textbf{contingencia.}
+	
+	\item $((p \wedge q) \rightarrow p) \rightarrow q$
+	
+	Repitiendo el procedimiento previo,
+	
+	\begin{displaymath}
+		\begin{array}{|c c|c|c|c|}
+			p & q & q \wedge p & (p \wedge q) \rightarrow p & ((p \wedge q) \rightarrow p) \rightarrow q \\
+			\hline 
+			V & V & V & V & V\\
+			V & F & F & V & F\\
+			F & V & F & V & F\\
+			F & F & F & V & F\\
+		\end{array}
+	\end{displaymath}
+
+	Se trata de una contingencia.
+	
+	\item $(\neg p \rightarrow q) \rightarrow (\neg q \rightarrow p)$
+	
+	Construimos la tabla de verdad
+	
+	\begin{displaymath}
+		\hspace*{-1cm}
+		\begin{array}{|c c|c|c|c|c|c|}
+			p & q & \neg p & \neg q & \neg p \rightarrow q & \neg q \rightarrow p & (\neg p \rightarrow q) \rightarrow (\neg q \rightarrow p) \\
+			\hline 
+			V & V & F & F & V & V & V\\
+			V & F & F & V & V & V & V\\
+			F & V & V & F & V & V & V\\
+			F & F & V & V & F & F & V\\
+		\end{array}
+	\end{displaymath}
+	
+	Debido que en todos los casos siempre se llega al mismo resultado de verdad y que el mismo es Verdad, concluimos que se trata de una tautolog\'ia.
+	
+	\item $((p \wedge q) \vee (r \wedge \neg q)) \leftrightarrow ((\neg p \wedge \neg q) \vee (\neg r \wedge \neg q))$
+	
+	Llamando $P = ((p \wedge q) \vee (r \wedge \neg q)) \leftrightarrow ((\neg p \wedge \neg q) \vee (\neg r \wedge \neg q))$, construimos la tabla.
+	
+	\begin{displaymath}
+		\hspace*{-3cm}
+		\begin{array}{|c c c|c|c|c|c|c|c|c|}
+			p & q & r & p \wedge q & r \wedge \neg q & \neg p \wedge \neg q & \neg r \wedge \neg q & (p \wedge q) \vee (r \wedge \neg q) & (\neg p \wedge \neg q) \vee (\neg r \wedge \neg q) & P \\
+			\hline 
+			V & V & V & V & F & F & F & V & F & F\\
+			V & V & F & V & F & F & F & V & F & F\\
+			V & F & V & F & V & F & F & V & F & F\\
+			V & F & F & F & F & F & V & F & V & F\\
+			F & V & V & F & F & F & F & F & F & V\\
+			F & V & F & F & F & F & F & F & F & V\\
+			F & F & V & F & V & V & F & V & V & V\\
+			F & F & F & F & F & V & V & F & V & F\\
+		\end{array}
+	\end{displaymath}
+
+	Encontramos que se trata de una contingencia.
+	
+\end{enumerate}
+
+\section{Esquemas l\'ogicos - Cuantificadores}
+
+\textbf{Ejercicio 4.} Simbolizar utilizando universo, esquemas, cuantificadores y conectivos lógicos:
+
+\begin{enumerate}
+	\item Todos los números son enteros.
+	
+	Definiendo un universo con todos los n\'umeros enteros $\mathbb{N}$, entonces:
+	\begin{equation*}
+		(\forall n)(P(n))\qquad : P(n) = n \text{ pertence a } \mathbb{Z}
+	\end{equation*}
+
+	\item Existen números impares o no todos los números son pares.
+	
+	Definiendo los n\'umeros $n \in \mathbb{Z}$ y $m \in \mathbb{Z}$. Llamando a las proposiciones $p = n \text{ impar}$ y $q = m \text{ par}$, construimos la proposici\'on $$p \vee \neg q$$ De esta manera, la expresi\'on simb\'olica es $$(\exists n)(\forall m)(p \vee \neg q)$$
+\end{enumerate}
