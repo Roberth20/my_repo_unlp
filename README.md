@@ -7,3 +7,7 @@ las asignaturas dictadas a lo largo de la carrera de Licenciatura en Fisica de l
 
 Las dos vias para hacer cambios y ayudar al desarrollo del repositorio son por el medio de clonacion y edicion del usuario, o
 sencillamente, comentando la correccion en la seccion de issues, siempre estoy atento a hacer mejoras.
+
+**Nota sobre los notebooks**
+
+Estan disenados para ser ejecutados y estudiados como un informe de laboratorio. Por lo tanto, tambien pueden exportarse como PDF. 
