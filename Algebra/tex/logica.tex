@@ -174,7 +174,8 @@ proposición e indicar su valor de verdad. Y si algún enunciado no es proposici
 	\end{itemize}
 \end{enumerate}
 
-\textbf{Ejercicio 3.} Construir las tablas de verdad de las siguientes fórmulas y clasificarlas en tautologías ,contradicciones ycontingencias.
+\textbf{Ejercicio 3.} Construir las tablas de verdad de las siguientes fórmulas y clasificarlas en tautologías ,contradicciones y
+contingencias.
 
 \begin{enumerate}
 	\item $\neg p \rightarrow (q \vee \neg p)$
@@ -234,7 +235,7 @@ proposición e indicar su valor de verdad. Y si algún enunciado no es proposici
 	Llamando $P = ((p \wedge q) \vee (r \wedge \neg q)) \leftrightarrow ((\neg p \wedge \neg q) \vee (\neg r \wedge \neg q))$, construimos la tabla.
 	
 	\begin{displaymath}
-		\hspace*{-3cm}
+		\hspace*{-1cm}
 		\begin{array}{|c c c|c|c|c|c|c|c|c|}
 			p & q & r & p \wedge q & r \wedge \neg q & \neg p \wedge \neg q & \neg r \wedge \neg q & (p \wedge q) \vee (r \wedge \neg q) & (\neg p \wedge \neg q) \vee (\neg r \wedge \neg q) & P \\
 			\hline 
@@ -268,4 +269,92 @@ proposición e indicar su valor de verdad. Y si algún enunciado no es proposici
 	\item Existen números impares o no todos los números son pares.
 	
 	Definiendo los n\'umeros $n \in \mathbb{Z}$ y $m \in \mathbb{Z}$. Llamando a las proposiciones $p = n \text{ impar}$ y $q = m \text{ par}$, construimos la proposici\'on $$p \vee \neg q$$ De esta manera, la expresi\'on simb\'olica es $$(\exists n)(\forall m)(p \vee \neg q)$$
+	
+	\item Para todo par de números reales, si su producto es uno entonces uno es el inverso del otro.
+	
+	Definiendo un par de n\'umeros $(x,y) \in \mathbb{R}$, y las proposiciones
+	\begin{align*}
+		p(x,y) &\equiv x \cdot y = 1 & q(x,y) &\equiv x = \frac{1}{y} 
+	\end{align*}
+	Podemos escribir la expresi\'on como $$(\forall x)(\forall y)(p(x,y) \rightarrow q(x,y))$$
+	
+	\item Dado dos números reales, existe un número real mayor a la suma de ambos.
+	
+	Para el universo de los n\'umeros reales, definimos tres valores $(x,y,z) \in \mathbb{R}$, la cuantificaci\'on de l proposici\'on ser\'a $$p(x,y,z) \equiv z > x+y$$ As\'i, la expresi\'on l\'ogica es $$(\forall x)(\forall y)(\exists z)(p(x,y,z))$$
+\end{enumerate}
+
+\textbf{Ejercicio 5.} Escribir en el lenguaje corriente las siguientes proposiciones, siendo el universo el conjunto de númerosreales y los esquemas definidos como sigue:
+\begin{align*}
+	p(x)&: x es par & q(x)&: x es divisible por 2 & r(x)&: x> 0\\
+	p(x,y)&: y > x & q(x,y)&: x + y = 0
+\end{align*}
+
+\begin{enumerate}
+	\item $(\forall x)(p(x) \rightarrow q(x))$
+	
+	\textit{Para todo n\'umero real, si es par entonces el mismo es divisible por 2}
+	
+	\item $(\exists y)(\forall x)p(x,y)$
+	
+	\textit{Existe un n\'umero real mayor a cualquier otro.}
+	
+	\item $(\forall x)(\exists y)p(y, x+3)$
+	
+	\textit{Para todo n\'umero real sumado 3, existe otro que es mayor.}
+	
+	\item $(\forall x)\left(r(x) \rightarrow (\exists y)(\neg r(y) \wedge q(x,y))\right)$
+	
+	\textit{Para todo n\'umero real positivo, existe un n\'umero negativo para el cu\'al su suma es igual a cero.}
+\end{enumerate}
+
+\section{Implicaciones y leyes de equivalencia}
+
+\textit{Es importante incorporar y aprender a manejar las equivalencias e implicaciones lógicas que veremos a continuación. Son de utilidad para simplificar y operar de forma más efectiva con proposiciones y esquemas proposicionales más complejos. Como los enunciados en matemática son de la forma "si pasa tal cosa"(hipótesis), ”entonces pasa tal otra"(conclusión), es fundamental que incorporen las equivalencias lógicas necesarias para la negación de una implicación o condicional $p \rightarrow q$. Además, como muchas veces nuestras propiedades son enunciados cuantificados, es igual defundamental que incorporen las equivalencias lógicas que se usan para negar cuantificadores.}
+
+Las siguientes son algunas implicaciones l\'ogicas:
+
+\begin{enumerate}
+	\item \textbf{Doble negaci\'on:} $p \Leftrightarrow \neg (\neg p)$
+	\item \textbf{Leyes conmutativas:} $p \wedge q \Leftrightarrow q \wedge p\qquad$ y $\qquad p \vee q \Leftrightarrow q \vee p$
+	\item \textbf{Leyes asociativas:} $(p \vee q) \vee r \Leftrightarrow p \vee (q \vee r)\qquad$ y $\qquad (p \wedge q) \wedge r \Leftrightarrow p \wedge (q \wedge r)$
+	\item \textbf{Leyes distributivas:} $(p \vee q) \wedge r \Leftrightarrow (p \wedge r) \vee (q \wedge r)\quad$ y $\quad (p \wedge q) \vee r \Leftrightarrow (p \vee r) \wedge (q \vee r)$
+	\item \textbf{Leyes de Morgan:} $\neg(p \vee q) \Leftrightarrow \neg p \wedge \neg q \qquad$ y $\qquad \neg(p \wedge q) \Leftrightarrow \neg p \vee \neg q$
+	\item \textbf{Ley de implicaci\'on:} $p \rightarrow q \Leftrightarrow \neg p \vee q$
+\end{enumerate}
+
+\textbf{Ejercicio 6.}
+\begin{enumerate}
+	\item Probar las equivalencias de 5, mostrando que las proposiciones que se obtienen reemplazando $\Leftrightarrow$ por $\leftrightarrow$ son
+	tautologías.
+	
+	Expresando la primera con la forma del bicondicional, $\neg(p \vee q) \leftrightarrow \neg p \wedge \neg q$ procedemos a elaborar la tabla de verdad.
+	
+	\begin{displaymath}
+		\hspace*{-1cm}
+		\begin{array}{|c c|c|c|c|}
+			p & q & p \vee q & \neg p \wedge \neg q & \neg(p \vee q) \leftrightarrow \neg p \wedge \neg q\\
+			\hline 
+			V & V & V & F & V\\
+			V & F & V & F & V\\
+			F & V & V & F & V\\
+			F & F & F & V & V\\
+		\end{array}
+	\end{displaymath}
+	
+	Como se trata de una tautolog\'ia, confirmamos que la primera equivalencia es correcta. Repetimos para la segunda, cambiando la equivalencia por un bicondicional, tenemos la expresi\'on $\neg(p \wedge q) \leftrightarrow \neg p \vee \neg q$, y su tabla de verdad es:
+	
+	\begin{displaymath}
+		\hspace*{-1cm}
+		\begin{array}{|c c|c|c|c|}
+			p & q & p \wedge q & \neg p \vee \neg q & \neg(p \wedge q) \leftrightarrow \neg p \vee \neg q\\
+			\hline 
+			V & V & V & F & V\\
+			V & F & F & V & V\\
+			F & V & F & V & V\\
+			F & F & F & V & V\\
+		\end{array}
+	\end{displaymath}
+	
+	Al igual que el resultado anterior, se trata de una tautolog\'ia que comprueba la equivalencia.
+	
 \end{enumerate}

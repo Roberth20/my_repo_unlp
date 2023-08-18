@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2023.8.17)  17 AUG 2023 16:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2023.8.17)  18 AUG 2023 11:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -133,7 +133,7 @@ Package babel Info: Making " an active character on input line 561.
 Package babel Info: Making . an active character on input line 662.
 Package babel Info: Making < an active character on input line 707.
 Package babel Info: Making > an active character on input line 707.
-)))
+))
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
@@ -141,10 +141,32 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+\Gm@cnth=\count267
+\Gm@cntv=\count268
+\c@Gm@tempcnt=\count269
+\Gm@bindingoffset=\dimen151
+\Gm@wd@mp=\dimen152
+\Gm@odd@mp=\dimen153
+\Gm@even@mp=\dimen154
+\Gm@layoutwidth=\dimen155
+\Gm@layoutheight=\dimen156
+\Gm@layouthoffset=\dimen157
+\Gm@layoutvoffset=\dimen158
+\Gm@dimlist=\toks24
 )
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2020-01-29 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count267
+\l__color_backend_stack_int=\count270
 \l__pdf_internal_box=\box49
 )
 (./Algebra_resolution.aux
@@ -170,17 +192,17 @@ LaTeX Font Info:    ... okay on input line 5.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count268
-\scratchdimen=\dimen151
+\scratchcounter=\count271
+\scratchdimen=\dimen159
 \scratchbox=\box50
-\nofMPsegments=\count269
-\nofMParguments=\count270
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count271
-\MPscratchDim=\dimen152
-\MPnumerator=\count272
-\makeMPintoPDFobject=\count273
-\everyMPtoPDFconversion=\toks25
+\nofMPsegments=\count272
+\nofMParguments=\count273
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count274
+\MPscratchDim=\dimen160
+\MPnumerator=\count275
+\makeMPintoPDFobject=\count276
+\everyMPtoPDFconversion=\toks26
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -192,8 +214,42 @@ e
 ))
 LaTeX Info: Redefining \. on input line 5.
 LaTeX Info: Redefining \% on input line 5.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 11.
 
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(72.26999pt, 452.9679pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 700.50687pt, 72.26999pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=452.9679pt
+* \textheight=700.50687pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-31.8738pt
+* \headheight=12.0pt
+* \headsep=19.8738pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=88.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 11.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -232,43 +288,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
 
+
+Overfull \hbox (6.77998pt too wide) in paragraph at lines 13--14
+[]\OT1/cmr/m/n/12 Son pro-po-si-cio-nes, lla-man-do a las pro-po-si-cio-nes co-
+mo $\OML/cmm/m/it/12 p \OT1/cmr/m/n/12 = []$ y $\OML/cmm/m/it/12 q \OT1/cmr/m/n
+/12 = []$.
+ []
+
 [5]
+Underfull \vbox (badness 4673) has occurred while \output is active []
+
 LaTeX Info: Redefining \. on input line 101.
 LaTeX Info: Redefining \% on input line 101.
  [6]
-Overfull \hbox (5.15646pt too wide) in paragraph at lines 124--125
-[]\OT1/cmr/m/n/12 Es una pro-po-si-ci^^Son. Lla-man-do las pro-po-si-cio-nes $\
-OML/cmm/m/it/12 p \OT1/cmr/m/n/12 = []$
- []
-
-LaTeX Info: Redefining \. on input line 135.
-LaTeX Info: Redefining \% on input line 135.
-
-Overfull \hbox (4.74481pt too wide) has occurred while \output is active
-\OT1/cmr/m/sl/12 1.1.  ESCRIBIR EN EL LENGUAJE SIMB[]OLICO { TABLAS DE VERDAD \
-OT1/cmr/m/n/12 7
- []
+LaTeX Info: Redefining \. on input line 146.
+LaTeX Info: Redefining \% on input line 146.
 
 [7]
-LaTeX Info: Redefining \. on input line 172.
-LaTeX Info: Redefining \% on input line 172.
+LaTeX Info: Redefining \. on input line 211.
+LaTeX Info: Redefining \% on input line 211.
  [8]
-LaTeX Info: Redefining \. on input line 229.
-LaTeX Info: Redefining \% on input line 229.
-
-Overfull \hbox (4.74481pt too wide) has occurred while \output is active
-\OT1/cmr/m/sl/12 1.1.  ESCRIBIR EN EL LENGUAJE SIMB[]OLICO { TABLAS DE VERDAD \
-OT1/cmr/m/n/12 9
- []
-
-[9]
-Overfull \hbox (32.9449pt too wide) detected at line 251
+Overfull \hbox (26.88252pt too wide) detected at line 251
 | []
  []
 
 LaTeX Info: Redefining \. on input line 271.
 LaTeX Info: Redefining \% on input line 271.
-[10])
+[9]
+LaTeX Info: Redefining \. on input line 315.
+LaTeX Info: Redefining \% on input line 315.
+ [10])
 LaTeX Info: Redefining \. on input line 15.
 LaTeX Info: Redefining \% on input line 15.
  [11]
@@ -283,13 +332,13 @@ LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
  (./tex/logica.aux)) ) 
 Here is how much of TeX's memory you used:
- 3186 strings out of 481190
- 44311 string characters out of 5913950
- 358640 words of memory out of 5000000
- 20103 multiletter control sequences out of 15000+600000
+ 3708 strings out of 481190
+ 51859 string characters out of 5913950
+ 377411 words of memory out of 5000000
+ 20614 multiletter control sequences out of 15000+600000
  413191 words of font info for 64 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
- 83i,10n,88p,446b,487s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 83i,10n,88p,653b,453s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.p
@@ -299,7 +348,7 @@ texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Algebra_resolution.pdf (12 pages, 110781 bytes).
+Output written on Algebra_resolution.pdf (12 pages, 120270 bytes).
 PDF statistics:
  79 PDF objects out of 1000 (max. 8388607)
  55 compressed objects within 1 object stream
