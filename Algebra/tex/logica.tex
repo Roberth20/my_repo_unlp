@@ -283,7 +283,8 @@ contingencias.
 	Para el universo de los n\'umeros reales, definimos tres valores $(x,y,z) \in \mathbb{R}$, la cuantificaci\'on de l proposici\'on ser\'a $$p(x,y,z) \equiv z > x+y$$ As\'i, la expresi\'on l\'ogica es $$(\forall x)(\forall y)(\exists z)(p(x,y,z))$$
 \end{enumerate}
 
-\textbf{Ejercicio 5.} Escribir en el lenguaje corriente las siguientes proposiciones, siendo el universo el conjunto de númerosreales y los esquemas definidos como sigue:
+\textbf{Ejercicio 5.} Escribir en el lenguaje corriente las siguientes proposiciones, siendo el universo el conjunto de números
+reales y los esquemas definidos como sigue:
 \begin{align*}
 	p(x)&: x es par & q(x)&: x es divisible por 2 & r(x)&: x> 0\\
 	p(x,y)&: y > x & q(x,y)&: x + y = 0
@@ -309,7 +310,8 @@ contingencias.
 
 \section{Implicaciones y leyes de equivalencia}
 
-\textit{Es importante incorporar y aprender a manejar las equivalencias e implicaciones lógicas que veremos a continuación. Son de utilidad para simplificar y operar de forma más efectiva con proposiciones y esquemas proposicionales más complejos. Como los enunciados en matemática son de la forma "si pasa tal cosa"(hipótesis), ”entonces pasa tal otra"(conclusión), es fundamental que incorporen las equivalencias lógicas necesarias para la negación de una implicación o condicional $p \rightarrow q$. Además, como muchas veces nuestras propiedades son enunciados cuantificados, es igual defundamental que incorporen las equivalencias lógicas que se usan para negar cuantificadores.}
+\textit{Es importante incorporar y aprender a manejar las equivalencias e implicaciones lógicas que veremos a continuación. Son de utilidad para simplificar y operar de forma más efectiva con proposiciones y esquemas proposicionales más complejos. Como los enunciados en matemática son de la forma "si pasa tal cosa"(hipótesis), ”entonces pasa tal otra"(conclusión), es fundamental que incorporen las equivalencias lógicas necesarias para la negación de una implicación o condicional $p \rightarrow q$. Además, como muchas veces nuestras propiedades son enunciados cuantificados, es igual de
+fundamental que incorporen las equivalencias lógicas que se usan para negar cuantificadores.}
 
 Las siguientes son algunas implicaciones l\'ogicas:
 
@@ -357,4 +359,90 @@ Las siguientes son algunas implicaciones l\'ogicas:
 	
 	Al igual que el resultado anterior, se trata de una tautolog\'ia que comprueba la equivalencia.
 	
+	\item Deducir la equivalencia de la implicación con el contrarrecíproco: $p \rightarrow q \Leftrightarrow \neg q \rightarrow \neg p$
+	
+	Construimos la tabla de verdad para la expresi\'on, reemplazando $\Leftrightarrow$ por $\leftrightarrow$.
+	
+	\begin{displaymath}
+		\hspace*{-1cm}
+		\begin{array}{|c c|c|c|c|}
+			p & q & p \leftrightarrow q & \neg q \leftrightarrow \neg p & p \rightarrow q \leftrightarrow \neg q \rightarrow \neg p\\
+			\hline 
+			V & V & V & V & V\\
+			V & F & F & F & V\\
+			F & V & V & V & V\\
+			F & F & V & V & V\\
+		\end{array}
+	\end{displaymath}
+
+	Como se trata de una tautolog\'ia, se demuestra la equivalencia entre ambas
+	
+\end{enumerate}
+
+Las siguientes son algunas implicaciones lógicas, que incorporaremos como herramientas para hacer pruebas más
+complejas:
+
+\begin{enumerate}
+	\item \textbf{Adici\'on:} $p \Rightarrow (p \vee q)$
+	\item \textbf{Simplificaci\'on:} $(p \wedge q) \Rightarrow p$
+	\item \textbf{Modus Ponens: } $p \wedge (p \rightarrow q) \Rightarrow q$
+	\item \textbf{Modus Tolens: } $(p \vee q) \wedge \neg p \Rightarrow q$
+	\item \textbf{Silogismo hipot\'etico: } $(p \rightarrow q) \wedge (q \rightarrow r) \Rightarrow p \rightarrow r$
+\end{enumerate}
+
+\textbf{Ejercicio 7.} Probar las implicaciones 3 y 5, mostrando que las proposiciones que se obtienen reemplazando $\Rightarrow$ por $\rightarrow$son tautologías.
+
+Haciendo el reemplazo en Modus ponens, la tabla de verdad es
+
+\begin{displaymath}
+	\hspace*{-1cm}
+	\begin{array}{|c c|c|c|c|}
+		p & q & p \rightarrow q & p \wedge (p \rightarrow q) & p \wedge (p \rightarrow q) \rightarrow q\\
+		\hline 
+		V & V & V & V & V\\
+		V & F & F & F & V\\
+		F & V & V & F & V\\
+		F & F & V & F & V\\
+	\end{array}
+\end{displaymath}
+
+Comprobando as\'i la implicaci\'on. Y para el silogismo hipot\'etico
+
+\begin{displaymath}
+	\hspace*{-0cm}
+	\begin{array}{|c c c|c|c|c|c|c|}
+		p & q & r & p \rightarrow q & q \rightarrow r & (p \rightarrow q) \wedge (q \rightarrow r) & p \rightarrow r & (p \rightarrow q) \wedge (q \rightarrow r) \rightarrow p \rightarrow r\\
+		\hline 
+		V & V & V & V & V & V & V & V\\
+		V & V & F & V & F & F & F & V\\
+		V & F & V & F & V & F & V & V\\
+		V & F & F & F & V & F & F & V\\
+		F & V & V & V & V & V & V & V\\
+		F & V & F & V & F & F & V & V\\
+		F & F & V & V & V & V & V & V\\
+		F & F & F & V & V & V & V & V\\
+	\end{array}
+\end{displaymath}
+
+\section{Negaci\'on de cuantificadores y condicionales}
+
+Teniendo en cuenta las equivalencias:
+
+\begin{align}
+	\neg (\forall x)p(x) &\Leftrightarrow (\exists x)(\neg p(x)) & &\text{y} & \neg(\exists x)p(x) &\Leftrightarrow (\forall x)(\neg p(x))
+\end{align}
+
+\textbf{Ejercicio 8.} Encontrar expresiones equivalentes para la negación de los esquemas del ejercicio 5.
+
+\begin{enumerate}
+	\item Planteando la negaci\'on y utilizando la equivalencia
+	\begin{equation*}
+		\neg(\forall x)(p(x) \rightarrow q(x)) \Leftrightarrow (\exists x)(\neg(p(x) \rightarrow q(x)))
+	\end{equation*}
+	Aplicando la Ley de Implicaci\'on $$(\exists x)(\neg(p(x) \rightarrow q(x))) \Leftrightarrow (\exists x)(\neg(\neg p(x) \vee q(x)))$$ 
+	Luego, la Ley de Morgan $$(\exists x)(\neg(\neg p(x) \vee q(x))) \Leftrightarrow (\exists x)(\neg (\neg p(x)) \wedge \neg q(x))$$ 
+	Y por doble negaci\'on, $$(\exists x)(\neg (\neg p(x)) \wedge \neg q(x)) \Leftrightarrow (\exists x)(p(x) \wedge \neg q(x))$$ 
+	As\'i, se lee como \textit{Existe un n\'umero par que no es divisible por 2}
+	
+	\item Planteando la equivalencia de negaci\'on $$\neg (\exists y)(\forall x)p(x,y) \Leftrightarrow (\forall y)(\exists x)(\neg p(x,y))$$ Y se lee, \textit{Para todo n\'umero, existe otro que es menor.}
 \end{enumerate}

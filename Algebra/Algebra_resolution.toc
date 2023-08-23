@@ -3,3 +3,4 @@
 \contentsline {section}{\numberline {1.1}Escribir en el lenguaje simbólico – Tablas de verdad}{5}{}%
 \contentsline {section}{\numberline {1.2}Esquemas l\'ogicos - Cuantificadores}{9}{}%
 \contentsline {section}{\numberline {1.3}Implicaciones y leyes de equivalencia}{11}{}%
+\contentsline {section}{\numberline {1.4}Negaci\'on de cuantificadores y condicionales}{13}{}%
