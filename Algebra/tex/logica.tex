@@ -390,7 +390,8 @@ complejas:
 	\item \textbf{Silogismo hipot\'etico: } $(p \rightarrow q) \wedge (q \rightarrow r) \Rightarrow p \rightarrow r$
 \end{enumerate}
 
-\textbf{Ejercicio 7.} Probar las implicaciones 3 y 5, mostrando que las proposiciones que se obtienen reemplazando $\Rightarrow$ por $\rightarrow$son tautologías.
+\textbf{Ejercicio 7.} Probar las implicaciones 3 y 5, mostrando que las proposiciones que se obtienen reemplazando $\Rightarrow$ por $\rightarrow$
+son tautologías.
 
 Haciendo el reemplazo en Modus ponens, la tabla de verdad es
 
@@ -445,4 +446,41 @@ Teniendo en cuenta las equivalencias:
 	As\'i, se lee como \textit{Existe un n\'umero par que no es divisible por 2}
 	
 	\item Planteando la equivalencia de negaci\'on $$\neg (\exists y)(\forall x)p(x,y) \Leftrightarrow (\forall y)(\exists x)(\neg p(x,y))$$ Y se lee, \textit{Para todo n\'umero, existe otro que es menor.}
+	
+	\item Procediendo como en los incisos anteriores, $$\neg (\forall x)(\exists y) p(y, x+3) \Leftrightarrow (\exists x)(\forall y)(\neg p(y, x+3))$$ Y se lee, \textit{Para todo n\'umero existe otro que es 3 unidades menor}
+	
+	\item Finalmente, $$\neg (\forall x)(r(x) \rightarrow (\exists y)(\neg r(y) \wedge q(x,y))) \Leftrightarrow (\exists x)\neg(r(x) \rightarrow (\exists y)(\neg r(y) \wedge q(x,y)))$$
+	Utilizando la Ley de Implicaci\'on $$(\exists x)\neg(r(x) \rightarrow (\exists y)(\neg r(y) \wedge q(x,y))) \Leftrightarrow (\exists x)\neg(\neg r(x) \vee (\exists y)(\neg r(y) \wedge q(x,y)))$$
+	Luego, por Ley de Morgan $$(\exists x)\neg(\neg r(x) \vee (\exists y)(\neg r(y) \wedge q(x,y))) \Leftrightarrow (\exists x)(\neg (\neg r(x)) \wedge \neg (\exists y)(\neg r(y) \wedge q(x,y)))$$
+	Empleando la doble negaci\'on y la negaci\'on de cuantificadores $$(\exists x)(\neg (\neg r(x)) \wedge \neg (\exists y)(\neg r(y) \wedge q(x,y))) \Leftrightarrow (\exists x)(r(x) \wedge (\forall y)\neg(\neg r(y) \wedge q(x,y)))$$
+	Aplicando la Ley de Morgan de nuevo $$(\exists x)(r(x) \wedge (\forall y)\neg(\neg r(y) \wedge q(x,y))) \Leftrightarrow (\exists x)(r(x) \wedge (\forall y)(\neg (\neg r(y)) \vee \neg q(x,y)))$$
+	Y por doble negaci\'on $$(\exists x)(r(x) \wedge (\forall y)(\neg (\neg r(y)) \vee \neg q(x,y))) \Leftrightarrow (\exists x)(r(x) \wedge (\forall y)(r(y) \vee \neg q(x,y)))$$ 
+	Y se lee, \textit{Existe un n\'umero positivo que al sumar con cualquier otro n\'umero, el segundo es positivo o la suma es diferente de cero.}
 \end{enumerate}
+
+\textbf{Ejercicio 9.} A partir de la leyes de equivalencia, probar la siguiente equivalencia para la negación de una implicación: 
+\begin{equation}
+	\neg (p \rightarrow q) \Leftrightarrow p \wedge \neg q
+\end{equation}
+
+Desde la implicaci\'on, partimos aplicando la Ley de la implicaci\'on $$\neg (p \rightarrow q) \Leftrightarrow \neg (\neg p \vee q)$$
+Luego, utilizamos la Ley de Morgan $$\neg (\neg p \vee q) \Leftrightarrow \neg(\neg p) \wedge \neg q$$ 
+Y por doble negaci\'on $$\neg(\neg p) \wedge \neg q \Leftrightarrow p \wedge \neg q$$
+
+\textbf{Ejercicio 10.} Definir universo y esquemas para simbolizar la siguiente proposición:\\
+
+\textit{Para todo par de números reales, si su suma es 16 y su producto es 9, entonces uno de ellos es 5}\\
+
+Negar la proposición anterior en forma simbólica y traducirla al lenguaje coloquial.
+
+Definiendo el universo $U = \mathbb{R}$, siendo $(x,y) \in U$, definimos las proposiciones 
+\begin{align*}
+	p(x,y) &: x + y = 16 & q(x,y) &: x\cdot y = 9 & r(x) &: x = 5
+\end{align*}
+
+Construimos el esquema l\'ogico $$\forall (x,y)((p(x,y) \wedge q(x,y)) \rightarrow (r(x) \vee r(y)))$$
+
+La negaci\'on ser\'a $$\neg \forall (x,y)((p(x,y) \wedge q(x,y)) \rightarrow (r(x) \vee r(y))) \Leftrightarrow \exists (x,y)\neg((p(x,y) \wedge q(x,y)) \rightarrow (r(x) \vee r(y)))$$ 
+Aplicando la negaci\'on de la implicaci\'on (1.2), $$\exists (x,y)\neg((p(x,y) \wedge q(x,y)) \rightarrow (r(x) \vee r(y))) \Leftrightarrow \exists (x,y)((p(x,y) \wedge q(x,y)) \wedge \neg (r(x) \vee r(y)))$$
+Y por Ley de Morgan $$\exists (x,y)((p(x,y) \wedge q(x,y)) \wedge \neg (r(x) \vee r(y))) \Leftrightarrow \exists (x,y)((p(x,y) \wedge q(x,y)) \wedge (\neg r(x) \wedge \neg r(y)))$$
+Leyendose como \textit{Existe un par de n\'umeros reales para los cuales su suma es 16, su multiplicaci\'on es 9 y ninguno es igual a 5}
