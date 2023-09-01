@@ -22,7 +22,7 @@ práctica:
 
 \section{Definici\'on por extensi\'on y comprensi\'on - Conjunto Vac\'io}
 
-\textit{En esta primer tanda de ejercicios trabajamos con el concepto de conjunto y su definición: tanto por extensión -exhibiendo la lista de sus elementos- como por comprensión -en donde se especifica una (o varias) propiedades que debe cumplir un elemento para pertenecer al conjunto en cuestión-. Es importante notar que podemos definir de muchas formas a un mismo conjunto por comprensión (¡incluso al conjunto vacío!).}
+\textit{En esta primer tanda de ejercicios trabajamos con el concepto de conjunto y su definición: tanto por extensión -exhibiendo la lista de sus elementos- como por comprensión -en donde se especifica una (o varias) propiedades que debe cumplir un elemento para pertenecer al conjunto en cuestión-. Es importante notar que podemos definir de muchas formas a un mismo conjunto por comprensión (¡incluso al conjunto vacío!).}\\
 
 \textbf{Ejercicio 1.} Definir los siguientes conjuntos por extensión:
 
@@ -35,3 +35,45 @@ práctica:
 	
 	Como $k$ pertenece a los enteros, $B$ por extensi\'on es $$B = \{ -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 \}$$
 \end{enumerate}
+
+\textbf{Ejercicio 2.} Definir por comprensión:
+
+\begin{enumerate}
+	\item El conjunto de los números naturales \textbf{impares}.
+	
+	Los impares son los n\'umeros que no son divisibles por 2/. De esta manera, $$C = \{ n \in \mathbb{N}, n \% 2 \neq 0\}$$ Donde la operaci\'on $\%$ es el modulo, o resto de $n$
+	
+	\item El conjunto $C = {4, 9, 16, 25, 36}$
+	
+	Observando el conjunto podemos notar que son n\'umeros al cuadrado, por lo tanto $$ C = \{ n^2 \in \mathbf{N} : 2 \leq n \leq 6 \}$$
+\end{enumerate}
+
+\textbf{Ejercicio 3.} Determinar si $A = B$ en los siguientes casos:
+
+\begin{enumerate}
+	\item $A = \{ z \in \mathbb{Z} : z \text{ es impar} \}$ y $B = \{ z \in \mathbb{Z}: \text{ existe } k \in \mathbb{Z} \text{ tal que } z = 2k + 1 \}$
+	
+	$A$ se define como todos los n\'umeros impares en $\mathbb{Z}$, por otro lado, $B$ es un conjunto definido por una operaci\'on que convierte cualquier n\'umero en impar. Como ambos son subconjuntos de $\mathbb{Z}$, y desarrollando por expresi\'on, ambos contienen los mismos elementos, entonces $A = B$
+	
+	\item $A = \emptyset$ y $B = \{\emptyset\}$
+	
+	$\emptyset$ representa el conjunto vac\'io, $A$ es igual a dicho conjunto, mientras que $B$ es un conjunto que tiene como elemento al conjunto vac\'io. Esta diferencia en definici\'on, nos permite concluir que $A \neq B$
+	
+	\item $A = \emptyset$ y $B = \{ x \in \mathbb{R}: x^2 + 1= 0 \}$
+	
+	Resolviendo la ecuaci\'on que define al conjunto $B$, encontramos que no existe n\'umero real que sea soluci\'on, siendo as\'i $B = \emptyset$. Por lo tanto, $A = B$
+	
+	\item $A = \{ y \in \mathbb{N}: 0 < y < 1 \}$ y $B = \{ y \in \mathbb{R}: 0 < y < 1 \}$
+	
+	Ambos conjuntos difieren del conjunto de n\'umeros del cual se definen, siendo as\'i que seg\'un cada definici\'on $A = \emptyset$ y $B$ contiene infinitos elementos. Por estas razones, concluimos que $A \neq B$
+	
+	\item $A = \{ -2, 0, 1, -1, 2, 3 \}$ y $B = \{ x \in \mathbb{R}: x \text{ es un n\'umero entero y } -\frac{5}{2} \leq x < \sqrt{9} \}$
+	
+	Como los dos son conjuntos finitos, podemos desarrollar $B$, as\'i $$B = \{-2, -1, 0, 1, 2\}$$ Ambos poseen los mismos elementos a excepci\'on del 3. Por lo tanto, $A \neq B$
+\end{enumerate}
+
+\section{Inclusión de conjuntos - Subconjuntos}
+
+\textit{La relación inclusión nos sirve para “comparar” dos conjuntos; se trata de analizar si todos los elementos de uno 	son también elementos del otro. Es muy importante aprender a distinguir este concepto del de pertenencia y para esoes que trabajaremos los siguientes ejercicios. Recuerden que hay que tener mucho cuidado en no confundir los símbolos“$\in$” (“pertenece a”) y “$\subset$” (“está incluido en”).}\\
+
+\textbf{Ejercicio 4.} Sea $A = \{1, 2, \{3\}, \{1, 2\}, -1\}$, decir si son verdaderas o falsas las siguientes relaciones. Justifique.
