@@ -74,6 +74,111 @@ práctica:
 
 \section{Inclusión de conjuntos - Subconjuntos}
 
-\textit{La relación inclusión nos sirve para “comparar” dos conjuntos; se trata de analizar si todos los elementos de uno 	son también elementos del otro. Es muy importante aprender a distinguir este concepto del de pertenencia y para esoes que trabajaremos los siguientes ejercicios. Recuerden que hay que tener mucho cuidado en no confundir los símbolos“$\in$” (“pertenece a”) y “$\subset$” (“está incluido en”).}\\
+\textit{La relación inclusión nos sirve para “comparar” dos conjuntos; se trata de analizar si todos los elementos de uno 	son también elementos del otro. Es muy importante aprender a distinguir este concepto del de pertenencia y para eso
+es que trabajaremos los siguientes ejercicios. Recuerden que hay que tener mucho cuidado en no confundir los símbolos
+“$\in$” (“pertenece a”) y “$\subset$” (“está incluido en”).}\\
 
 \textbf{Ejercicio 4.} Sea $A = \{1, 2, \{3\}, \{1, 2\}, -1\}$, decir si son verdaderas o falsas las siguientes relaciones. Justifique.
+
+\begin{enumerate}
+	\item $3 \in A$. 
+	
+	\textbf{Falso.} $\in$ hace referencia a "\textit{elemento} : \textit{conjunto}". De esta forma, el elemento 3, no se encuentra en $A$.
+	
+	\item $\{1, 2\}$ es subconjunto de $A$.
+	
+	\textbf{Verdadero.} Todos los elementos del conjunto se encuentran dentro de $A$
+	
+	\item $\{1, 2\} \in A$.
+	
+	\textbf{Verdadero.} En este caso, se cuestiona si el conjunto, como elemento, se encuentra dentro de $A$
+	
+	\item $\{3\} \subset A$ 
+	
+	\textbf{Falso.} El s\'imbolo de subconjunto $\subset$ hace referencia a "\textit{subconjunto}:\textit{conjunto}". El subconjunto formado por el elemento 3 no pertenece a $A$
+	
+	\item $\{\{3\}\} \subset A$
+	
+	\textbf{Verdadero.} Forma correcta del inciso anterior.
+	
+	\item $\emptyset \in A$.
+	
+	\textbf{Falso.} El elemento que representa al conjunto vac\'io no esta definido en $A$
+	
+	\item $\{-1, 2\} \subset A$
+	
+	\textbf{Verdadero.} Todos los elementos del conjunto se encuentran dentro de $A$
+	
+	\item $\emptyset \subset A$
+	
+	\textbf{Verdadero.} Por definici\'on el conjunto vac\'io es un subconjunto de todo conjunto.
+	
+	\item $\{1, 2, -1\} \in A$
+	
+	\textbf{Falso.} Dicho elemento no se encuentra en $A$
+\end{enumerate}
+
+\textbf{Ejercicio 5.} Sean $A = \{x \in \mathbb{Z}: x \text{ es multiplo de } 3\}$, $B = \{x \in \mathbb{Z}: x \text{ es multiplo de } 7\}$ y $C = \{x \in \mathbb{Z}: x \text{ es multiplo de } 21\}$. Probar que:
+
+\begin{enumerate}
+	\item $C \subset A$ y $A \neq C$
+	
+	Debido a que $(\forall c \in C)(c \text{ es multiplo de 3})$, tenemos que $\forall c \in C \wedge c \in A$. Concluimos que $C \subset A$. Sin embargo, no ocurre lo contrario, implicando que $A \neq C$, y lo comprobamos con el n\'umero 9, este pertenece a $A$ pero no a $C$
+	
+	\item $C \subset B$ y $B \neq C$.
+	
+	Siguiendo el mismo an\'alisis comprobamos y demostramos ambas afirmaciones
+\end{enumerate}
+
+\textbf{Ejercicio 6.} Sea $E$ el conjunto cuyos elementos son el conjunto $\mathbb{N}$ de los n\'umeros naturales y el conjunto $\mathbb{P}$ de los n\'umeros naturales pares.
+
+\begin{enumerate}
+	\item \textquestiondown Es $\{2, 4, 6\}$ subconjunto de \textit{E}?
+	
+	La expresi\'on que define la pregunta es $\{2, 4, 6\} \subset E$. Debido a que el conjunto no se encuentra en \textit{E}, la pregunta es negativa.
+	
+	\item \textquestiondown $\{\mathbb{N}\} \subset E$?
+	
+	El conjunto formado por el conjunto de los naturales es un subconjunto de \textit{E}, por lo tanto es afirmativo.
+	
+	\item \textquestiondown $\mathbb{N} \subset E$?
+	
+	En este caso es negativo, los naturales no son un subconjunto de \textit{E}. Es conveniente escribir de forma simbolica \textit{E}. $E = \{\mathbb{N}, \mathbb{P}\}$
+	
+	\item \textquestiondown $\mathbb{P} \in E$?
+	
+	Correcto, el conjunto de los n\'umeros pares es un elemento de \textit{E}
+	
+	\item \textquestiondown $\emptyset \subset E$? 
+	
+	Correcto, el conjunto vac\'io es parte de todos los conjuntos.
+\end{enumerate}
+
+\textbf{Ejercicio 7.} Analizar la validez, en general, de la afirmación \textbf{Si B $\in$ A y C $\subset$ B, entonces C $\subset$ A}
+
+Esta afirmaci\'on es \textbf{falsa.} Como vimos en el ejercicio anterior, si un conjunto \textit{pertenece} a otro, implica que todo el conjunto es un elemento de otro. Como \textbf{C} es subconjunto de \textbf{B} pero \textbf{B} es un elemento de \textbf{A}, entonces \textbf{C} no puede ser un conjunto de \textbf{A}. Solo es posible si B $\subset$ A
+
+\section{Conjunto de partes}
+
+\textit{l conjunto de partes es la “prueba de fuego” para detectar si estamos trabajando correctamente los conceptos deinclusión y pertenencia. Debemos comprender que la idea es que \textbf{pertenecer a} $P(A)$ equivale a \textbf{estar incluído en} $A$.}
+
+\textbf{Ejercicio 8.} Sea $A = \{a, b, c, d\}$
+\begin{enumerate}
+	\item Hallar $P(A)$.
+	
+	Como $P(A)$ se define por todos los posibles subconjuntos de \textit{A}, entonces 
+	\begin{align*}
+		P(A) = &\{\emptyset, \{a\}, \{b\}, \{c\}, \{d\}, \{a, b\}, \{a, c\}, \{a, d\}, \{b, c\}, \{b, d\}, \{c, d\},\\
+		 &\{a, b, c\}, \{a, b, d\}, \{b, c, d\}, A\}
+	\end{align*}
+	
+	\item Decidir cu\'ales de las siguientes expresiones son verdaderas:
+	\begin{enumerate}
+		\item $\{a\} \in A$. \textbf{Falso}
+		\item $\{a\} \in P(A)$. \textbf{Verdadero}
+		\item $\emptyset \in P(A)$. \textbf{Verdadero}
+		\item $\emptyset \subset P(A)$. \textbf{Verdadero}
+		\item $b \in P(A)$. \textbf{Falso}
+		\item $\{a, \{b, c\}\} \in P(A)$. \textbf{Falso}
+	\end{enumerate}
+\end{enumerate}

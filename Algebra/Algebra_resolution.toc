@@ -7,3 +7,4 @@
 \contentsline {chapter}{\numberline {2}Teor\'ia de Conjuntos}{15}{}%
 \contentsline {section}{\numberline {2.1}Definici\'on por extensi\'on y comprensi\'on - Conjunto Vac\'io}{15}{}%
 \contentsline {section}{\numberline {2.2}Inclusión de conjuntos - Subconjuntos}{17}{}%
+\contentsline {section}{\numberline {2.3}Conjunto de partes}{18}{}%
