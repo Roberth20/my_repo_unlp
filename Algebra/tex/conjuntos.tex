@@ -160,7 +160,8 @@ Esta afirmaci\'on es \textbf{falsa.} Como vimos en el ejercicio anterior, si un 
 
 \section{Conjunto de partes}
 
-\textit{l conjunto de partes es la “prueba de fuego” para detectar si estamos trabajando correctamente los conceptos deinclusión y pertenencia. Debemos comprender que la idea es que \textbf{pertenecer a} $P(A)$ equivale a \textbf{estar incluído en} $A$.}
+\textit{l conjunto de partes es la “prueba de fuego” para detectar si estamos trabajando correctamente los conceptos de
+inclusión y pertenencia. Debemos comprender que la idea es que \textbf{pertenecer a} $P(A)$ equivale a \textbf{estar incluído en} $A$.}
 
 \textbf{Ejercicio 8.} Sea $A = \{a, b, c, d\}$
 \begin{enumerate}
@@ -181,4 +182,114 @@ Esta afirmaci\'on es \textbf{falsa.} Como vimos en el ejercicio anterior, si un 
 		\item $b \in P(A)$. \textbf{Falso}
 		\item $\{a, \{b, c\}\} \in P(A)$. \textbf{Falso}
 	\end{enumerate}
+\end{enumerate}
+
+\textbf{Ejercicio 9.}
+\begin{enumerate}
+	\item Sea $A = \{1, \{2\}, \{\emptyset\}, \{1, 2\}\}$, hallar $P(A)$
+	
+	\begin{align*}
+		P(A) =& \{ \emptyset, \{1\}, \{\{2\}\}, \{\{\emptyset\}\}, \{\{1, 2\}\}, \{1, \{2\}\}, \{1, \{\emptyset\}\}, \{1, \{1, 2\}\}, \\
+		&\{\{2\}, \{\emptyset\}\}, \{\{2\}, \{1, 2\}\}, \{1, \{2\}, \{\emptyset\}\}, \{1, \{2\}, \{1, 2\}\},\\
+		&\{\{2\}, \{\emptyset\}, \{1, 2\}\}, A \} 
+	\end{align*}
+
+	\item Hallar: $P(\emptyset)$ y $P(P(\emptyset))$
+	
+	\begin{align*}
+		P(\emptyset) &= \{\emptyset, \{\emptyset\}\}\\
+		P(P(\emptyset)) &= \{\emptyset, \{\emptyset\}, \{\{\emptyset\}\}, P(\emptyset)\}
+	\end{align*}
+\end{enumerate}
+
+\textbf{Ejercicio 10.} Construir tres conjuntos \textit{A, B} y \textit{C} que cumplan simult\'aneamente las siguientes condiciones:
+\begin{multicols}{3}
+\begin{enumerate}
+	\item $2 \in A$
+	\item $\{1, 2, 3\} \in P(A)$
+	\item $\{\{2\}\} \in P(A)$
+	\item $\emptyset \in B$
+	\item $\{6, \{10\}\} \subset B$
+	\item $A \in C$
+	\item $B \subset C$
+\end{enumerate}
+\end{multicols}
+
+De la primera condici\'on, sabemos que 2 pertenece a \textit{A}, $A = \{2\}$. Luego, de la segunda condici\'on, como el conjunto formado por 1, 2 y 3 pertenece al conjunto de partes de \textit{A}. Entonces, el mismo es un subconjunto de \textit{A}. As\'i, $$A = \{1, 2, 3\}$$ Por la tercera condici\'on, el conjunto formado por $\{2\}$ es un subconjunto de \textit{A}. Por lo tanto, $$A = \{1, 2, 3, \{2\}\}$$ El conjunto vac\'io es un elemento de \textit{B}, quedando el mismo como $$B = \{\emptyset\}$$ Luego, el conjunto formado por 6 y $\{10\}$ es un subconjunto de \textit{B}, es decir, todos sus elementos son elementos de \textit{B}. $$B = \{\emptyset, 6, \{10\}\}$$ \textit{A} es un elemento de \textit{C}. Por lo tanto, todo el conjunto \textit{A} esta dentro de \textit{C} como un \'unico elemento $$C = \{A\} = \{\{1, 2, 3, \{2\}\}\}$$ Finalmente, \textit{B} es un subconjunto de \textit{C}, siendo as\'i y resumiendo la construcci\'on de los conjuntos como:
+
+\begin{align*}
+	A &= \{1, 2, 3, \{2\}\} & B &= \{\emptyset, 6, \{10\}\} & C &= \{\{1, 2, 3, \{2\}\}, \emptyset, 6, \{10\} \}
+\end{align*}
+
+\section{Operaciones con conjuntos}
+
+\subsection{Uni\'on e intersecci\'on}
+
+\textit{La unión e intersección de conjuntos son dos operaciones binarias que nos permiten crear, a partir de un par 
+de conjuntos, nuevos conjuntos. Es importante no confundirlas, tanto a las operaciones como a las notaciones que se	emplean para indicarlas. También es importante relacionarlas con los conectivos disyunción y conjunción que vimos en	lógica.}\\
+
+\textbf{Ejercicio 11.} Hallar la uni\'on $A \cup B$ en los siguientes casos:
+
+\begin{enumerate}
+	\item $A = \{x \in \mathbb{Z}: -2 \leq x \leq 8\} \qquad B = \{x \in \mathbb{Z}: -5 \leq x \leq 3\}$
+	
+	La uni\'on representa que ambos conjuntos unen todos sus elementos, de esta manera $$A \cup B = \{x \in \mathbb{Z}: -5 \leq x \leq 8\}$$
+	
+	\item $A = \{x \in \mathbb{N}: 1 \leq x < 8\} \qquad B = \{x \in \mathbb{N}: 8 < x \leq 12\}$
+	
+	As\'i, la uni\'on es $$A \cup B = \{x \in \mathbb{N}: 1 \leq x \leq 12\}$$
+\end{enumerate}
+
+\textbf{Ejercicio 12.} Hallar la intersecci\'on $A \cap B$ en los siguientes casos:
+
+\begin{enumerate}
+	\item $A = \{x \in \mathbb{R}: 0 \leq x \leq 6\} \qquad B = \{y \in \mathbb{N}: 0 < y \leq 10\}$
+	
+	La intersecci\'on es el conjunto formado por elementos que est\'an tanto en \textit{A} como en \textit{B}, as\'i $$A \cap B = \{y \in \mathbb{N}: 0 < y \leq 6\}$$
+	
+	\item $A = \{x \in \mathbb{R}: -1 < x \leq 1/4\} \qquad B = \{ z \in \mathbb{R}: -1 < z < 0 \text{ \'o } 0 < z < 3 \}$
+	
+	Aplicando el concepto anterior $$ A\cap B = \{ x \in \mathbb{R}: -1 < x < 0 \text{ \'o } 0 < x \leq 1/4 \}$$
+\end{enumerate}
+
+\textbf{Ejercicio 13.} Tomando los conjuntos: $A = \{1, 3, \{4, 5, 6\}, \{7\}\}; \quad B = \{ 3, 4, 5, b, c \};$ $C = \{ 0, b, \{c\}, 2, 3, 4 \} \text{ y } D = \{ \{1\}, \{2\}, \{7\}, b, c \}$. Hallar:
+
+\begin{enumerate}
+	\item $(A \cup B) \cap C$
+	
+	Primero, realizamos la uni\'on de \textit{A} y \textit{B} $$A \cup B = \{ 1, 3, 4, 5, b, c, \{3, 4, 6\}, \{7\} \}$$ Y ahora, su intersecci\'on con \textit{C} $$(A \cup B) \cap C = \{b, 3, 4\}$$
+	
+	\item $(A \cap B)\cup C$
+	
+	Repetimos procedimiento para todos los incisos, $$A \cap B = \{ 3 \}$$ $$(A \cap B)\cup C = \{3, 0, b, \{c\}, 2, 4\}$$
+	
+	\item $D \cap C \cap B$
+	
+	La intersecci\'on es una operaci\'on asociativa, por lo tanto $$D \cap C = \{b\}$$ $$D \cap C \cap B = \{b\}$$
+	
+	\item $A \cup (C \cup B)$
+	$$C \cup B = \{0, b, \{c\}, 2, 3, 4, 5, c\}$$ $$A \cup (C \cup B) = \{1, \{4, 5, 6\}, \{7\}, 0, b, \{c\}, 2, 3, 4, 5, c\}$$
+	
+	\item $(A \cap B)\cup(C \cap D)$
+	$$A \cap B = \{3\}$$ $$C \cap D = \{b\}$$ $$(A \cap B)\cup(C \cap D) = \{3, b\}$$
+\end{enumerate}
+
+\subsection{Complemento -Diferencia y Diferencia simétrica}
+
+\textit{Tomar complemento de un conjunto es la operación que nos queda para analizar. Es fundamental tener presenteel universo respecto al cual complementamos (y que siempre lo indiquemos en los ejercicios). Vamos a trabajar enreconocer a las restantes operaciones (diferencia y diferencia simétrica) caracterizándolas a partir de las operacionesque ya estudiamos. Por ejemplo, podemos interpretar $A - B$ como la intersección de A con el complemento de B.}\\
+
+\textbf{Ejercicio 14.} Sean $A = \{1, 2, 3\}; \quad B = \{3, 4, 1, b\}; \quad C = \{0, b, 2, 3\}$. Hallar: \textit{De ser necesario, considerar para este ejercicio como universo al conjunto $U = A \cup B \cup C$} 
+
+\begin{enumerate}
+	\item $A - B$
+	
+	La diferencia entre dos conjuntos, por intuici\'on, estar\'ia representada por todos los elementos de \textit{A} que no se encuentran en \textit{B}. Por notaci\'on de conjuntos, esto ser\'ia
+	\begin{equation}
+		A - B = A \cap B^c
+	\end{equation}
+	Donde $B^c$ es el conjunto complemento de \textit{B}, es decir, todos los elementos del universo que no son parte de \textit{B}. De esta forma, nuestro universo es $$U = \{1, 2, 3, 4, b, 0\}$$ Y la resta tiene como resultado
+	\begin{align*}
+		A - B &= A\cap B^c & B^c &= \{2, 0\}\\
+		&= \{2\}
+	\end{align*}
 \end{enumerate}
